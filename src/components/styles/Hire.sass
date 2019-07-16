@@ -1,0 +1,80 @@
+.form 
+    width: 800px
+    height: 500px 
+    padding: 10px
+    display: grid
+    grid-template-areas: "head head head head head head" "btn1 btn1 btn2 btn2 btn3 btn3" "btn4 btn4 btn4 btn5 btn5 btn5" "btn6 btn6 btn6 btn6 btn6 btn6" "input1 input1 input1 input2 input2 input2" "submit submit submit submit submit submit"
+    p,
+    button,
+    input
+        height: 45px
+        background-color: #0c0c0c
+        color: #fff
+        font-size: 20px
+    p 
+        text-align: center
+        font-size: 35px
+        grid-area: head
+        align-self: center
+    button 
+        position: relative
+        transition: .2s linear
+        cursor: pointer
+        border: 2px solid #fff
+        background-color: #0c0c0c
+        outline-offset: 55px
+        &:hover 
+            letter-spacing: 1px
+    button::after, button::before
+        content: "" 
+        display: block 
+        position: absolute
+        background-color: red
+        height: 1px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+    button:nth-of-type(2)::before
+        width: 1px 
+        height: 115px
+        transform: translate(-50%, 0)
+        top: auto 
+        bottom: -115px
+    button:nth-of-type(1)::after, button:nth-of-type(3)::after 
+        width: 1px
+        height: 40px
+        top: auto 
+        bottom: -100%
+        transform: translate(0)
+    button:nth-of-type(2)::after 
+        width: 300px
+    button:nth-of-type(4)::after 
+        right: -100%
+        left: auto
+        transform: translateX(0)
+        width: 300px
+    button:nth-of-type(7)::after
+        width: 1px 
+        height: 115px
+        transform: translate(-50%, 0)
+        top: -115px
+    input 
+        width: 90%
+        border: none
+        border-bottom: 2px solid #fff
+        padding: 5px
+        justify-self: center 
+        align-self: center
+    input 
+        outline-color: #fff
+    input[type="text"]
+        grid-area: input1
+    input[type="email"]
+        grid-area: input2
+    button.active 
+        outline: none
+        background-color: #f00
+    button.active::after 
+        z-index: -1
+  

@@ -1,0 +1,59 @@
+.about
+    padding: 10%
+    flex-wrap: wrap 
+    align-content: center
+    font-size: 90px
+    font-weight: bold
+    @media (orientation: landscape) and (max-width: 1500px)
+        font-size: 70px
+    .quote-container 
+        height: 20% 
+        display: flex 
+        align-items: center
+        perspective: 400px
+    .quote-1 
+        width: 70%
+        opacity: 0 
+        display: flex 
+        align-items: flex-end
+        border-bottom: 2px solid red
+    .quote-2,
+        width: 90%
+        justify-content: flex-end
+    .quote-2 span
+        opacity: 1
+        margin-right: 20px
+    .quote-1.active 
+        animation: fadein .5s linear 2.5s forwards
+    .quote-2.active span
+        animation: fadeout .5s linear 1.5s forwards
+    .card
+        display: flex
+        width: 4%
+        height: 30%
+        align-items: center
+        position: relative
+        transition: 1s linear
+        transform-style: preserve-3d
+        transform: rotateY(0deg)
+        .card-front,
+        .card-back 
+            position: absolute
+            left: 50%
+            backface-visibility: hidden 
+            transform: translateX(-50%)
+        .card-back 
+            transform: translateX(-50%) rotateY(180deg)
+            color: red
+    .card.active 
+            animation: rotate .5s linear 3.5s forwards
+@keyframes rotate 
+    100% 
+        transform: rotateY(180deg)
+@keyframes fadein 
+    100% 
+        opacity: 1 
+@keyframes fadeout
+    100% 
+        opacity: 0
+

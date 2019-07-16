@@ -1,0 +1,103 @@
+=btnReset()
+    border: none 
+    cursor: pointer 
+    color: white 
+    background-color: #0c0c0c
+
+// menu and hamburger button
+
+.hamburgerBtn
+    position: fixed 
+    right:  -100px 
+    top: 10px 
+    z-index: 1
+    transition: .3s linear
+    +btnReset()
+    font-size: 30px
+.hamburgerBtn.active 
+    right: 10px
+.navButtons 
+    position: fixed 
+    top: 0 
+    right: -350px 
+    height: 100vh 
+    width: 250px 
+    background-color: #0c0c0c
+    transition: .3s linear
+    display: flex 
+    justify-content: center 
+    align-content: center
+    flex-wrap: wrap
+    visibility: hidden
+    .menuBtn 
+        flex-basis: 100%
+        height: 100px
+        text-transform: uppercase
+        font-size: 30px
+        transition: .3s linear
+        +btnReset()
+
+        &:hover 
+            letter-spacing: 2px
+            transform: translateX(-10%)
+.navButtons.active 
+    right: 0
+    visibility: visible
+
+// section pointers on the left 
+
+.sectionPointersContainer 
+    position: fixed 
+    top: 0 
+    left: 0 
+    height: 100vh 
+    width: 150px 
+    background-color: #0c0c0c
+    transition: .3s linear
+    display: flex 
+    justify-content: center 
+    align-content: center
+    flex-wrap: wrap
+    background-color: #0c0c0c
+    @media (orientation: portrait)
+        display: none
+    .sectionPointer
+        position: relative
+        flex-basis: 100%
+        height: 100px
+        text-transform: uppercase
+        transition: .3s linear
+        border-right: 1px solid gray
+        text-align: right
+        padding-right: 10px
+        line-height: 100px
+        background-color: #0c0c0c
+        p 
+            color: gray
+    .sectionPointer.active 
+        border-right: 1px solid red 
+        p 
+            transform: translateX(105%)
+            transition: .3s linear
+            font-size: 20px
+            color: #fff
+            text-align: center
+    .sectionPointer.active::after 
+        content: "" 
+        display: block
+        position: absolute 
+        top: 50%
+        right: 0
+        transform: translateX(50%)
+        width: 15px
+        height: 15px
+        transform: rotate(45deg) translateY(-50%) 
+        background-color: red
+        z-index: -1
+
+// section change "arrow" buttons 
+
+.sectionChangeBtn 
+    cursor: pointer
+
+

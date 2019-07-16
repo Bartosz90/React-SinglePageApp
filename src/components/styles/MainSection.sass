@@ -1,0 +1,108 @@
+=btnReset()
+    border: none 
+    cursor: pointer 
+    color: white 
+.signature 
+    position: fixed
+    bottom: 10px
+    right: 10px
+    font-size: 15px
+    color: white 
+    text-decoration: none
+    animation: shake 3s linear infinite
+    @media (orientation: portrait)
+        display: none
+    span 
+        overflow-x: hidden 
+        position: relative
+    span::after 
+        content: ""
+        display: block
+        position: absolute 
+        width: 200%
+        height: 100%
+        background-color: #fff
+        z-index: 5
+        left: 0
+        top: 0
+        transition: .3s linear
+    &:hover span::after 
+        left: -200%
+@keyframes shake 
+    0% 
+        transform: translateX(-4px)  
+    2% 
+        transform: translateX(4px)  
+    4% 
+        transform: translateX(-4px)  
+    6% 
+        transform: translateX(4px)  
+    8% 
+        transform: translateX(-4px)  
+    10% 
+        transform: translateX(4px)  
+    11% 
+        transform: translateX(0)  
+    100% 
+        transform: translateX(0)  
+
+.main 
+    position: relative
+    width: 75vw
+    height: 100vh
+    margin: 0 auto
+    background-color: #0c0c0c
+    transition: .3s linear
+    transform: rotateY(0deg) translateZ(0px)
+    transform-origin: left
+    overflow-y:  hidden 
+    display: flex 
+    justify-content: center
+    align-items: center
+    @media (orientation: portrait)
+        width: 100vw
+.main.active 
+    transform: rotateY(30deg) translateZ(-100px)
+    border: 5px solid red
+.sectionChangeBtn 
+    position: absolute 
+    left: 50%
+    transform: translateX(-50%)
+    +btnReset()
+    font-size: 30px
+    background-color: transparent
+    cursor: pointer
+    z-index: 1
+.sectionUp
+    top: 15px
+.sectionDown
+    bottom: 15px
+    transform: rotate(180deg)
+.section
+    position: absolute 
+    width: 100% 
+    height: 100% 
+    top: 0 
+    left: 0
+    transition: .3s linear
+    opacity: 0
+    visibility: hidden
+    display: flex 
+    justify-content: center 
+    align-items: center
+    perspective: 600px
+.section.active 
+    opacity: 1
+    visibility: visible
+.works
+    width: 600px 
+    height: 300px
+    display: flex 
+    justify-content: center 
+    align-items: center
+    top: auto
+    left: auto
+
+.hire
+
+.about

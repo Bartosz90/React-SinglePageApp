@@ -1,0 +1,49 @@
+.contact
+    background-image: url(../../images/map.png)
+    background-position: center
+    background-size: cover
+    justify-content: flex-end 
+    .contact-me 
+        display: flex
+        justify-content: center 
+        align-items: center 
+        flex-wrap: wrap
+        width: 250px
+        height: 400px 
+        margin-right: 40px
+        padding: 2%
+        background-color: #0c0c0c
+        box-shadow: 0 0 30px 0 rgba(0,0,0,0.75)
+        transform: rotateY(-25deg) translateZ(-75px)
+        a 
+            display: flex 
+            justify-content: center 
+            align-items: center
+            flex-basis: 100% 
+            height: 20%
+            text-decoration: none    
+            color: #fff 
+            font-size: 30px
+            background-color: #1c1c1c
+            transition: .2s linear 
+            &:hover 
+                color: red 
+                box-shadow: 0 0 5px 0 rgba(255,0,0,0.75)
+.dot 
+    display: block 
+    position: absolute 
+    top: 55%
+    left: 50% 
+    width: 13px
+    height: 13px
+    border-radius: 50%
+    animation: radius 3s linear infinite
+    background-color: red
+.dot-smaller
+    animation-delay: 1s
+.dot-small
+    animation-delay: 2s
+@keyframes radius 
+    100%
+        transform: scale(5) 
+        opacity: 0
