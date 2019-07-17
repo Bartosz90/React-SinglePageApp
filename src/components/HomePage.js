@@ -52,7 +52,7 @@ class HomePage extends Component {
           <h1> {this.content[this.state.activeHeaderIndex].header}</h1>
           <img
             src={this.content[this.state.activeHeaderIndex].img}
-            alt="futuristic"
+            alt="example"
           />
         </div>
       )

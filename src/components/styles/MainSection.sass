@@ -61,7 +61,7 @@
     align-items: center
     @media (orientation: portrait)
         width: 100vw
-    @media (max-width: 700px)
+    @media (max-width: 900px)
         margin: 0 auto 0 20vw
 .main.active 
     transform: rotateY(30deg) translateZ(-100px)
@@ -81,7 +81,7 @@
     top: 15px
 .sectionDown
     bottom: 15px
-    transform: rotate(180deg)
+    transform: translateX(-50%) rotate(180deg)
 .section
     position: absolute 
     width: 100% 
@@ -98,15 +98,4 @@
 .section.active 
     opacity: 1
     visibility: visible
-.works
-    width: 600px 
-    height: 300px
-    display: flex 
-    justify-content: center 
-    align-items: center
-    top: auto
-    left: auto
 
-.hire
-
-.about
