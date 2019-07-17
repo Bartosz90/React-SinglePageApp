@@ -9,15 +9,23 @@
         width: 30%
         transform: translateY(-50%)
         font-size: 70px 
-        animation: hide 7s linear  infinite
+        animation: hide 5s linear  infinite
         opacity: 0
+        @media (orientation: landscape) and (max-width: 1500px)
+            font-size: 50px
+        @media (orientation: landscape) and (max-width: 900px)
+            font-size: 40px
+            left: 70px
+            width: 40%
+        @media (orientation: landscape) and (max-width: 1500px)
+            font-size: 30px
     img 
         position: absolute 
         right: 0
         top: 50% 
         transform: translate(0,-50%) perspective(300px) translateZ(-50px)
         width: 40%
-        animation: move 7s linear  infinite 
+        animation: move 5s linear  infinite 
         opacity: 0
 @keyframes hide 
     05% 

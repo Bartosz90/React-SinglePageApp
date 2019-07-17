@@ -40,7 +40,15 @@ class Hire extends Component {
         id: 5,
         gridArea: "btn6"
       }
-    ]
+    ],
+    buttonWidth: 220
+  };
+  updateDimensions = () => {
+    if (window.innerWidth < 580) {
+      this.setState({ buttonWidth: 120 });
+    } else if (window.innerHeight < 901) {
+      this.setState({ buttonWidth: 150 });
+    }
   };
   handleActiveButtons = action => {
     const buttons = [...this.state.buttons];
@@ -52,6 +60,10 @@ class Hire extends Component {
     });
     this.setState({ buttons });
   };
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+  }
   render() {
     const buttons = this.state.buttons.map(button => (
       <button
@@ -61,13 +73,13 @@ class Hire extends Component {
         onClick={() => this.handleActiveButtons(button.action)}
         type="button"
         style={{
-          width: 220,
+          width: this.state.buttonWidth,
           justifySelf: "center",
           alignSelf: "center",
           gridArea: button.gridArea
         }}
       >
-        {button.active && <i class="fas fa-check" />} {button.action}
+        {button.active && <i className="fas fa-check" />} {button.action}
       </button>
     ));
     return (
@@ -80,7 +92,7 @@ class Hire extends Component {
           type="button"
           style={{
             gridArea: "submit",
-            width: 220,
+            width: this.state.buttonWidth,
             justifySelf: "center",
             alignSelf: "center"
           }}

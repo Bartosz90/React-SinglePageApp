@@ -10,7 +10,7 @@
     color: white 
     text-decoration: none
     animation: shake 3s linear infinite
-    @media (orientation: portrait)
+    @media (max-width: 900px)
         display: none
     span 
         overflow-x: hidden 
@@ -61,6 +61,8 @@
     align-items: center
     @media (orientation: portrait)
         width: 100vw
+    @media (max-width: 700px)
+        margin: 0 auto 0 20vw
 .main.active 
     transform: rotateY(30deg) translateZ(-100px)
     border: 5px solid red
@@ -73,6 +75,8 @@
     background-color: transparent
     cursor: pointer
     z-index: 1
+    @media (max-width: 700px)
+        font-size: 20px
 .sectionUp
     top: 15px
 .sectionDown

@@ -21,7 +21,7 @@
         background-color: #fff 
         border-radius: 50%
         animation: loading 1s linear
-        animation-iteration-count: 5
+        animation-iteration-count: 3
     span:nth-child(2)
         animation-delay: .2s
     span:nth-child(3)
@@ -63,10 +63,17 @@
     justify-content: center 
     align-items: center
     padding: 0 300px
+    @media (orientation: landscape) and (max-width: 1024px) 
+        padding: 0 30px
+    @media (orientation: landscape) and (max-width: 900px) 
+        padding: 0 10px
     h2 
         font-size: 40px
         text-align: center
-
+        @media (orientation: landscape) and (max-width: 1024px) 
+            font-size: 30px
+        @media (orientation: landscape) and (max-width: 900px) 
+            font-size: 20px
 .rectangle-2.active 
     top: 50vh
     visibility: visible

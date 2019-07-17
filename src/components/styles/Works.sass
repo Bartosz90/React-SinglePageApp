@@ -15,6 +15,7 @@
     background-color: transparent
     display: flex 
     justify-content: center
+    align-items: center
     img 
         height: 100%
         cursor: pointer
@@ -22,6 +23,10 @@
         transition: transform .2s linear .8s
         &:hover ~ h2 
             letter-spacing: 2px
+        @media (orientation: landscape) and (max-width: 1024px)
+            height: 60%
+        @media (max-width: 700px)
+            height: 50%
     h2 
         position: absolute 
         top: 50% 
@@ -30,6 +35,8 @@
         cursor: pointer
         text-transform: uppercase 
         transition: .3s linear
+        @media (max-width: 700px)
+            font-size: 20px
         &:hover 
             letter-spacing: 2px
 .work.active 
@@ -54,9 +61,23 @@
     z-index: 1
     border: none 
     color: white 
+    @media (max-width: 700px)
+        font-size: 20px
 .prev
     left: -50px
     transform: translateY(-50%) rotate(-90deg)
+    @media (orientation: landscape) and (max-width: 900px)
+        left: 50px
+    @media (max-width: 700px)
+        left: 100px
+    @media (max-width: 700px)
+        left: 130px
 .next 
     right: -50px
     transform: translateY(-50%) rotate(90deg)
+    @media (orientation: landscape) and (max-width: 900px)
+        right: 50px
+    @media (max-width: 700px)
+        right: 100px
+    @media (max-width: 580px)
+        right: 130px

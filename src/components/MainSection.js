@@ -29,13 +29,6 @@ const MainSection = props => {
         ) : null}
         {section.name === "contact" ? <Contact className="contact" /> : null}
         {section.name === "hire us" ? <Hire className="hire" /> : null}
-
-        {/* {section.name !== "home" &&
-        section.name !== "contact" &&
-        section.name !== "works" &&
-        section.name !== "about"
-          ? section.name
-          : null} */}
       </section>
     );
   });

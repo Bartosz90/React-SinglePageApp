@@ -4,6 +4,11 @@
     padding: 10px
     display: grid
     grid-template-areas: "head head head head head head" "btn1 btn1 btn2 btn2 btn3 btn3" "btn4 btn4 btn4 btn5 btn5 btn5" "btn6 btn6 btn6 btn6 btn6 btn6" "input1 input1 input1 input2 input2 input2" "submit submit submit submit submit submit"
+    @media (orientation: landscape) and (max-width: 900px)
+        height: 300px
+        grid-template-areas: "head head head" "btn1 btn2 btn3" "btn4 btn5 btn6" "input1 . input2" "submit submit submit"
+    @media (max-width: 580px)
+        height: 250px
     p,
     button,
     input
@@ -11,11 +16,16 @@
         background-color: #0c0c0c
         color: #fff
         font-size: 20px
+        @media (orientation: landscape) and (max-width: 900px) 
+            height: 35px
+            font-size: 15px
     p 
         text-align: center
         font-size: 35px
         grid-area: head
         align-self: center
+        @media (max-width: 580px)
+            font-size: 25px
     button 
         position: relative
         transition: .2s linear
@@ -35,6 +45,8 @@
         top: 50%
         transform: translate(-50%, -50%)
         z-index: -1
+        @media (orientation: landscape) and (max-width: 900px)
+            display: none
     button:nth-of-type(2)::before
         width: 1px 
         height: 115px
@@ -66,6 +78,8 @@
         padding: 5px
         justify-self: center 
         align-self: center
+        @media (orientation: landscape) and (max-width: 900px) 
+            width: 100%
     input 
         outline-color: #fff
     input[type="text"]

@@ -10,7 +10,7 @@ class WelcomePage extends Component {
       this.setState({
         isActive: !this.state.isActive
       });
-    }, 4500);
+    }, 3000);
   }
 
   render() {
@@ -41,10 +41,7 @@ class WelcomePage extends Component {
               : "welcomeRectangle rectangle-2"
           }
         >
-          <h2>
-            At this moment this website is not working on mobile devices. For
-            best experience, visit it on desktop/notebook.
-          </h2>
+          <h2>For best experience, visit this site in landscape-view mode.</h2>
         </div>
       </>
     );
