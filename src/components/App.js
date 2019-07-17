@@ -52,6 +52,9 @@ class App extends Component {
   render() {
     return (
       <>
+        <div className="portraitError">
+          <h1>At this moment this website is designed for horizontal view.</h1>
+        </div>
         <WelcomePage />
         <MainSection
           isMenuActive={this.state.isMenuActive}
