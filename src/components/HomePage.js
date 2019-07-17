@@ -32,14 +32,14 @@ class HomePage extends Component {
             activeHeaderIndex: this.state.activeHeaderIndex + 1
           })
         : this.setState({ activeHeaderIndex: 0 });
-    }, 5000);
+    }, 4500);
   };
   componentDidMount() {
     let timer = setInterval(() => {
       this.setState({
         animationStartCounter: this.state.animationStartCounter + 1
       });
-      if (this.state.animationStartCounter === 900) {
+      if (this.state.animationStartCounter === 800) {
         this.startHomeAnimation();
         clearInterval(timer);
       }
@@ -47,7 +47,7 @@ class HomePage extends Component {
   }
   render() {
     return (
-      this.state.animationStartCounter === 900 && (
+      this.state.animationStartCounter === 800 && (
         <div className={this.props.className}>
           <h1> {this.content[this.state.activeHeaderIndex].header}</h1>
           <img
