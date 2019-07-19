@@ -42,7 +42,7 @@ class WelcomePage extends Component {
           }
         >
           <h2>
-            At this moment this website is available only for horizontal view.
+            At this moment this website is available only in horizontal view.
           </h2>
         </div>
       </>

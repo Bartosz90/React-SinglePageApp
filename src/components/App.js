@@ -54,7 +54,7 @@ class App extends Component {
       <>
         <div className="portraitError">
           <h1>
-            At this moment this website is available only for horizontal view.
+            At this moment this website is available only in horizontal view.
           </h1>
         </div>
         <WelcomePage />
