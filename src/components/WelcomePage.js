@@ -41,7 +41,9 @@ class WelcomePage extends Component {
               : "welcomeRectangle rectangle-2"
           }
         >
-          <h2>For best experience, visit this site in landscape-view mode.</h2>
+          <h2>
+            At this moment this website is available only for horizontal view.
+          </h2>
         </div>
       </>
     );
