@@ -46,7 +46,7 @@ class Hire extends Component {
   updateDimensions = () => {
     if (window.innerWidth < 580) {
       this.setState({ buttonWidth: 120 });
-    } else if (window.innerWidth < 901) {
+    } else if (window.innerWidth < 1001) {
       this.setState({ buttonWidth: 150 });
     } else {
       this.setState({ buttonWidth: 220 });

@@ -7,6 +7,8 @@
     @media (orientation: landscape) and (max-width: 900px)
         height: 250px
         grid-template-areas: "head head head head head head" "btn1 btn1 btn2 btn2 btn3 btn3" "btn4 btn4 btn5 btn5 btn6 btn6" "input1 input1 input1 input2 input2 input2" "submit submit submit submit submit submit"
+    @media (orientation: landscape) and (max-width: 580px)
+        height: 230px
     p,
     button,
     input
@@ -17,13 +19,18 @@
         @media (orientation: landscape) and (max-width: 900px) 
             height: 35px
             font-size: 15px
+        @media (orientation: landscape) and (max-width: 580px) 
+            height: 30px
+            font-size: 13px
     p 
         text-align: center
         font-size: 35px
         grid-area: head
         align-self: center
-        @media (max-width: 900px)
+        @media (orientation: landscape) and (max-width: 900px)
             font-size: 25px
+        @media (orientation: landscape) and (max-width: 580px)
+            font-size: 20px
     button 
         position: relative
         transition: .2s linear

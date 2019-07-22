@@ -15,13 +15,12 @@ class Works extends Component {
       { id: 4, name: "work work-4", active: false, img: img4 },
       { id: 5, name: "work work-5", active: false, img: img5 }
     ],
-    transform: 0,
     activeWorkIndex: 0
   };
   handleWorkSelection = action => {
     let works = [...this.state.works];
     works[this.state.activeWorkIndex].active = false;
-    if (action === "next" && this.state.activeWorkIndex < 4) {
+    if (action === "next" && this.state.activeWorkIndex < works.length - 1) {
       works[this.state.activeWorkIndex + 1].active = true;
       this.setState({ works, activeWorkIndex: this.state.activeWorkIndex + 1 });
     } else if (action === "next" && this.state.activeWorkIndex === 4) {
@@ -34,9 +33,6 @@ class Works extends Component {
       works[4].active = true;
       this.setState({ works, activeWorkIndex: 4 });
     }
-    action === "next"
-      ? this.setState({ transform: this.state.transform - 72 })
-      : this.setState({ transform: this.state.transform + 72 });
   };
 
   render() {
@@ -51,14 +47,7 @@ class Works extends Component {
     ));
     return (
       <>
-        <div
-          className="works-container"
-          style={{
-            transform: `translateZ(-200px) rotateY(${this.state.transform}deg)`
-          }}
-        >
-          {works}
-        </div>{" "}
+        {works}
         <button
           action="prev"
           className="prev"
