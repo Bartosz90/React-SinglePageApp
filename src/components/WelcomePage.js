@@ -10,7 +10,7 @@ class WelcomePage extends Component {
       this.setState({
         isActive: !this.state.isActive
       });
-    }, 3000);
+    }, 30);
   }
 
   render() {

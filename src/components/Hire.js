@@ -44,12 +44,12 @@ class Hire extends Component {
     buttonWidth: 220
   };
   updateDimensions = () => {
-    if (window.innerWidth < 580) {
-      this.setState({ buttonWidth: 120 });
-    } else if (window.innerWidth < 1001) {
-      this.setState({ buttonWidth: 150 });
+    if (window.innerWidth < 1200) {
+      this.setState({ buttonWidth: `${20}vw` });
+    } else if (window.innerWidth < 1400) {
+      this.setState({ buttonWidth: `${17}vw` });
     } else {
-      this.setState({ buttonWidth: 220 });
+      this.setState({ buttonWidth: `${13}vw` });
     }
   };
   handleActiveButtons = action => {
